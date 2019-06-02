@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">背包问题</string>
+    <string name="author_name">
+        陈鸿超\n吴丰屹\n曹佳伟\n
+    </string>
+    <string name="school_name">
+        吉林大学软件学院2017级
+    </string>
+    <string name="startuse">开始使用</string>
+    <string name="finish">退出程序</string>
+    <string name="backageIcondescribe">背包图标</string>
+    <string name="selectMenu">请选择所需要的功能</string>
+    <string name="sampleName">简单背包问题</string>
+    <string name="zerooneName">0-1背包问题</string>
+    <string name="commonName">一般背包问题</string>
+    <string name="dim2Name">二维背包问题</string>
+    <string name="inputdata">请输入数据</string>
+    <string name="maxweight">最大质量M</string>
+</resources>
