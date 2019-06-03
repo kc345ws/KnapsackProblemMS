@@ -1,5 +1,6 @@
 package com.kc345ws.knapsackproblemms.Simple;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +14,9 @@ import android.widget.TextView;
 
 import com.kc345ws.knapsackproblemms.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Simpleshow extends AppCompatActivity {
     private int[] itemWeight;
     @Override
@@ -21,7 +25,9 @@ public class Simpleshow extends AppCompatActivity {
         setContentView(R.layout.activity_simpleshow);
 
         Intent intent= Simpleshow.this.getIntent();
-        itemWeight = intent.getIntArrayExtra("itemWeight");
+        Bundle bundle = intent.getExtras();
+        itemWeight = bundle.getIntArray("itemWeight");
+        //itemWeight = intent.getIntArrayExtra("itemWeight");
 
         Button backBTN = findViewById(R.id.simpeshowback_BTN);
         backBTN.setOnClickListener(new View.OnClickListener() {
@@ -32,15 +38,27 @@ public class Simpleshow extends AppCompatActivity {
         });
 
         ListView listViewshow = findViewById(R.id.simplelistShow);
+        List<MySimpleShowBean> lists = new ArrayList<>();
+        int a = itemWeight.length;
+        for(int i = 0 ; i < itemWeight.length ; i++){
+            MySimpleShowBean mySimpleShowBean = new MySimpleShowBean(i);
+            mySimpleShowBean.setItemweight(itemWeight[i]);
+            lists.add(mySimpleShowBean);
+        }
+        MySimpleShowAdapter mySimpleShowAdapter = new MySimpleShowAdapter(Simpleshow.this,lists);
+        listViewshow.setAdapter(mySimpleShowAdapter);
     }
 }
 
 class MySimpleShowAdapter extends BaseAdapter{
-    public MySimpleShowAdapter(){
-
+    private Context mContext;
+    private List<MySimpleShowBean> lists;
+    public MySimpleShowAdapter(Context context , List<MySimpleShowBean> lists){
+        mContext = context;
+        this.lists = lists;
     }
     @Override
-    public int getCount() { return 0; }
+    public int getCount() { return lists.size(); }
     @Override
     public Object getItem(int position) { return null; }
     @Override
@@ -48,7 +66,17 @@ class MySimpleShowAdapter extends BaseAdapter{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        return null;
+        SimpleShowViewHolder Holder = null;
+        if(convertView == null){
+            convertView = View.inflate(mContext,R.layout.simplelistviewshow,null);
+            Holder = new SimpleShowViewHolder(convertView);
+            convertView.setTag(Holder);
+        }else{
+            Holder = (SimpleShowViewHolder)convertView.getTag();
+        }
+        Holder.getTextView_name().setText(lists.get(position).getStr());
+        Holder.getTextView_weight().setText(String.valueOf(lists.get(position).getItemweight()));
+        return convertView;
     }
 }
 
@@ -60,7 +88,7 @@ class MySimpleShowBean{
     public MySimpleShowBean(int index){
         this.index = index;
         this.itemweight = 0;
-        str = "第" + (index + 1) + "件物品质量";
+        str = "第" + (index + 1) + "件物品质量:";
     }
 
     public int getIndex() {
@@ -89,27 +117,27 @@ class MySimpleShowBean{
 }
 
 class SimpleShowViewHolder{
-    private TextView textView;
-    private EditText editText;
+    private TextView textView_name;
+    private TextView textView_weight;
     public SimpleShowViewHolder(View view){
-        textView = view.findViewById(R.id.MySimpleTextView);
-        editText = view.findViewById(R.id.MySimpleEDT);
+        textView_name = view.findViewById(R.id.simpleshowName_TXV);
+        textView_weight = view.findViewById(R.id.simpleshowWeight_TXV);
     }
 
-    public TextView getTextView() {
-        return textView;
+    public TextView getTextView_name() {
+        return textView_name;
     }
 
-    public EditText getEditText() {
-        return editText;
+    public TextView getTextView_weight() {
+        return textView_weight;
     }
 
-    public void setTextView(TextView textView) {
-        this.textView = textView;
+    public void setTextView_name(TextView textView_name) {
+        this.textView_name = textView_name;
     }
 
-    public void setEditText(EditText editText) {
-        this.editText = editText;
+    public void setTextView_weight(TextView textView_weight) {
+        this.textView_weight = textView_weight;
     }
 }
 

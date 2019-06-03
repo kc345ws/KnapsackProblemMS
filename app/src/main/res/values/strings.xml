@@ -16,4 +16,6 @@
     <string name="dim2Name">二维背包问题</string>
     <string name="inputdata">请输入数据</string>
     <string name="maxweight">最大质量M</string>
+    <string name="ok">确定</string>
+    <string name="back">返回</string>
 </resources>
