@@ -12,12 +12,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/MySimpleTextView"
+            android:text="第i件物品质量"
             />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:hint="请输入物品质量..."
+            android:id="@+id/MySimpleEDT"
             />
     </LinearLayout>
 </LinearLayout>

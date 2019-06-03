@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Simpleproblem">
+    tools:context=".Simple.Simpleproblem">
 
     <TextView
         android:id="@+id/textView5"
@@ -68,7 +68,7 @@
         android:id="@+id/simpleWight_BTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
@@ -83,6 +83,26 @@
         android:text="输入每一件物品的质量"
         app:layout_constraintStart_toEndOf="@+id/simpleWight_BTN"
         app:layout_constraintTop_toTopOf="@+id/simpleWight_BTN" />
+
+    <ImageButton
+        android:id="@+id/simpleshow_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:srcCompat="@drawable/chakan" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="查看每一件物品的质量"
+        app:layout_constraintStart_toEndOf="@+id/simpleshow_BTN"
+        app:layout_constraintTop_toTopOf="@+id/simpleshow_BTN" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -5,20 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Simple.SimpleInput">
+    tools:context=".Simple.Simpleshow">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/simpleok_BTN"
-        android:text="确定"
         android:layout_gravity="center_horizontal"
+        android:id="@+id/simpeshowback_BTN"
+        android:text="返回"
         />
-
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/simple_ListView"
+        android:id="@+id/simplelistShow"
         >
     </ListView>
 

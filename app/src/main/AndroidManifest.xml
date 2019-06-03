@@ -9,10 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SimpleInput"></activity>
+        <activity android:name=".Simple.Simpleshow"
+            android:label="查看每件物品质量"
+            ></activity>
         <activity
-            android:name=".Simpleproblem"
-            android:label="简单背包问题"></activity>
+            android:name=".Simple.SimpleInput"
+            android:label="填写每件物品质量" />
+        <activity
+            android:name=".Simple.Simpleproblem"
+            android:label="简单背包问题" />
         <activity
             android:name=".selectmenu"
             android:label="选择功能菜单" />
