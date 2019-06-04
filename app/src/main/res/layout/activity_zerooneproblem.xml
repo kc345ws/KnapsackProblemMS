@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ZeroOne.Zerooneproblem">
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/inputdata"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/maxweight"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/zerooneMaxWeight_EDT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/inputMaxWeight"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/textView13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/itemnumber"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView13"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <EditText
+        android:id="@+id/zerooneItemNumber_EDT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/inputItemNumber"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="@+id/zerooneMaxWeight_EDT"
+        app:layout_constraintStart_toStartOf="@+id/zerooneMaxWeight_EDT"
+        app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+    <ImageButton
+        android:id="@+id/zerooneItemWeight_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/wupinshenqing"
+        app:layout_constraintEnd_toStartOf="@+id/zerooneshowItemWeight_BTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <ImageButton
+        android:id="@+id/zerooneshowItemWeight_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/chakan"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/zerooneItemWeight_BTN"
+        app:layout_constraintStart_toStartOf="@+id/zerooneItemNumber_EDT"
+        app:layout_constraintTop_toTopOf="@+id/zerooneItemWeight_BTN" />
+
+    <ImageButton
+        android:id="@+id/zerooneaddItemPrice_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/jinbi"
+        app:layout_constraintEnd_toEndOf="@+id/zerooneItemWeight_BTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/zerooneItemWeight_BTN"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <ImageButton
+        android:id="@+id/zerooneshowItemprice_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/chakan"
+        app:layout_constraintBottom_toTopOf="@+id/textView17"
+        app:layout_constraintEnd_toEndOf="@+id/zerooneshowItemWeight_BTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/zerooneshowItemWeight_BTN"
+        app:layout_constraintTop_toTopOf="@+id/zerooneaddItemPrice_BTN" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addItemWeight"
+        app:layout_constraintEnd_toEndOf="@+id/zerooneItemWeight_BTN"
+        app:layout_constraintStart_toStartOf="@+id/zerooneItemWeight_BTN"
+        app:layout_constraintTop_toBottomOf="@+id/zerooneItemWeight_BTN" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/showItemWeight"
+        app:layout_constraintEnd_toEndOf="@+id/zerooneshowItemWeight_BTN"
+        app:layout_constraintStart_toStartOf="@+id/zerooneshowItemWeight_BTN"
+        app:layout_constraintTop_toBottomOf="@+id/zerooneshowItemWeight_BTN" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addItemPrice"
+        app:layout_constraintEnd_toEndOf="@+id/zerooneaddItemPrice_BTN"
+        app:layout_constraintStart_toStartOf="@+id/zerooneaddItemPrice_BTN"
+        app:layout_constraintTop_toBottomOf="@+id/zerooneaddItemPrice_BTN" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/showItemPrice"
+        app:layout_constraintEnd_toEndOf="@+id/zerooneshowItemprice_BTN"
+        app:layout_constraintStart_toStartOf="@+id/zerooneshowItemprice_BTN"
+        app:layout_constraintTop_toBottomOf="@+id/zerooneshowItemprice_BTN" />
+
+    <ImageButton
+        android:id="@+id/zeroone_ok_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/queding"
+        app:layout_constraintEnd_toEndOf="@+id/zerooneaddItemPrice_BTN"
+        app:layout_constraintStart_toStartOf="@+id/zerooneaddItemPrice_BTN"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <ImageButton
+        android:id="@+id/zeroone_back_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fanhui"
+        app:layout_constraintBottom_toBottomOf="@+id/zeroone_ok_BTN"
+        app:layout_constraintEnd_toEndOf="@+id/zerooneshowItemprice_BTN"
+        app:layout_constraintStart_toStartOf="@+id/zerooneshowItemprice_BTN"
+        app:layout_constraintTop_toTopOf="@+id/zeroone_ok_BTN" />
+</android.support.constraint.ConstraintLayout>
