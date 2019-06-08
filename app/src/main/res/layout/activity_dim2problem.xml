@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dim2.Dim2problem">
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/inputdata"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/maxweight"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/maxp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView20"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/itemnumber"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView21"
+        app:layout_constraintStart_toStartOf="@+id/textView21"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+    <EditText
+        android:id="@+id/dim2_maxWeight_EDT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="@string/inputWeight"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/textView20"
+        app:layout_constraintStart_toEndOf="@+id/textView20"
+        app:layout_constraintTop_toTopOf="@+id/textView20" />
+
+    <EditText
+        android:id="@+id/dim2_maxP_EDT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="@string/inputMaxp"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/textView21"
+        app:layout_constraintStart_toEndOf="@+id/textView21"
+        app:layout_constraintTop_toTopOf="@+id/textView21" />
+
+    <EditText
+        android:id="@+id/dim2_itemNumber_EDT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="@string/inputItemNumber"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/textView22"
+        app:layout_constraintStart_toEndOf="@+id/textView22"
+        app:layout_constraintTop_toTopOf="@+id/textView22" />
+
+    <ImageButton
+        android:id="@+id/dim2_addWeight_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/wupinshenqing"
+        app:layout_constraintEnd_toStartOf="@+id/dim2_showWeight_BTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+    <ImageButton
+        android:id="@+id/dim2_showWeight_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chakan"
+        app:layout_constraintBottom_toBottomOf="@+id/dim2_addWeight_BTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dim2_addWeight_BTN"
+        app:layout_constraintTop_toTopOf="@+id/dim2_addWeight_BTN" />
+
+    <ImageButton
+        android:id="@+id/dim2_addPrice_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/jinbi"
+        app:layout_constraintEnd_toStartOf="@+id/dim2_showPrice_BTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dim2_addWeight_BTN" />
+
+    <ImageButton
+        android:id="@+id/dim2_showPrice_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chakan"
+        app:layout_constraintBottom_toBottomOf="@+id/dim2_addPrice_BTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dim2_addPrice_BTN"
+        app:layout_constraintTop_toTopOf="@+id/dim2_addPrice_BTN" />
+
+    <ImageButton
+        android:id="@+id/dim2_addP_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/yongyao"
+        app:layout_constraintEnd_toStartOf="@+id/dim2_showP_BTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dim2_addPrice_BTN" />
+
+    <ImageButton
+        android:id="@+id/dim2_showP_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chakan"
+        app:layout_constraintBottom_toBottomOf="@+id/dim2_addP_BTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dim2_addP_BTN"
+        app:layout_constraintTop_toTopOf="@+id/dim2_addP_BTN" />
+
+    <ImageButton
+        android:id="@+id/dim2_ok_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/queding"
+        app:layout_constraintEnd_toStartOf="@+id/dim2_back_BTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dim2_addP_BTN" />
+
+    <ImageButton
+        android:id="@+id/dim2_back_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fanhui"
+        app:layout_constraintBottom_toBottomOf="@+id/dim2_ok_BTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dim2_ok_BTN"
+        app:layout_constraintTop_toTopOf="@+id/dim2_ok_BTN" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="填写质量"
+        app:layout_constraintEnd_toEndOf="@+id/dim2_addWeight_BTN"
+        app:layout_constraintStart_toStartOf="@+id/dim2_addWeight_BTN"
+        app:layout_constraintTop_toBottomOf="@+id/dim2_addWeight_BTN" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查看质量"
+        app:layout_constraintEnd_toEndOf="@+id/dim2_showWeight_BTN"
+        app:layout_constraintStart_toStartOf="@+id/dim2_showWeight_BTN"
+        app:layout_constraintTop_toBottomOf="@+id/dim2_showWeight_BTN" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="填写效益"
+        app:layout_constraintEnd_toEndOf="@+id/dim2_addPrice_BTN"
+        app:layout_constraintStart_toStartOf="@+id/dim2_addPrice_BTN"
+        app:layout_constraintTop_toBottomOf="@+id/dim2_addPrice_BTN" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查看效益"
+        app:layout_constraintEnd_toEndOf="@+id/dim2_showPrice_BTN"
+        app:layout_constraintStart_toStartOf="@+id/dim2_showPrice_BTN"
+        app:layout_constraintTop_toBottomOf="@+id/dim2_showPrice_BTN" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="填写体积"
+        app:layout_constraintEnd_toEndOf="@+id/dim2_addP_BTN"
+        app:layout_constraintStart_toStartOf="@+id/dim2_addP_BTN"
+        app:layout_constraintTop_toBottomOf="@+id/dim2_addP_BTN" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查看体积"
+        app:layout_constraintEnd_toEndOf="@+id/dim2_showP_BTN"
+        app:layout_constraintStart_toStartOf="@+id/dim2_showP_BTN"
+        app:layout_constraintTop_toBottomOf="@+id/dim2_showP_BTN" />
+</android.support.constraint.ConstraintLayout>
