@@ -262,7 +262,7 @@ class ResultForCommonProblem{
     private float []CostPer; //物品的性价比排序
     private int []CostPerIndex;//物品性价比排序索引
     List<Integer[]> Indexs = new ArrayList<>();//解的索引集合
-    List<Float[]> Volumes = new ArrayList<>();//体积
+    List<Float[]> Volumes = new ArrayList<>();//份数
     List<Float> Prices = new ArrayList<>();
     public ResultForCommonProblem(int maxWeight,int number,float[] itemWeight,float[] itemPrice){
         MaxWeight = maxWeight;
@@ -337,6 +337,7 @@ class ResultForCommonProblem{
             }
         }
     }
+
     public boolean solveProblem(){//继续解决问题
         Stack stack = new Stack();//
         Stack volumeStack = new Stack();
@@ -398,7 +399,7 @@ class ResultForCommonProblem{
                 //index = (int) stack.pop();//弹出栈顶元素
                 stack.pop();
                 float volume = (float)volumeStack.pop();//弹出体积
-                restMax+=ItemWeight[index] * volume;//剩余质量重新加上物品质量
+                restMax+=ItemWeight[CostPerIndex[index]] * volume;//剩余质量重新加上物品质量
                 index++;//继续尝试栈顶元素后面的元素是否能构成解
             }
         } while(!(index == Number && stack.empty()));//当索引不为Number且栈不为空时进行
