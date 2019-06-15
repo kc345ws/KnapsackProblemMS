@@ -241,11 +241,15 @@ public class Dim2problem extends AppCompatActivity {
 
     private View.OnClickListener showWeightBTN_ClickListener = new View.OnClickListener(){
         public void onClick(View v){
-            Intent intent = new Intent(Dim2problem.this, zeroone_showweight.class);
-            Bundle bundle =new Bundle();
-            bundle.putFloatArray("ItemWeights",ItemWeights);
-            intent.putExtras(bundle);
-            startActivity(intent);
+            if(ItemWeights!=null && ItemWeights.length >0) {
+                Intent intent = new Intent(Dim2problem.this, zeroone_showweight.class);
+                Bundle bundle = new Bundle();
+                bundle.putFloatArray("ItemWeights", ItemWeights);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }else{
+                Toast.makeText(Dim2problem.this,"请先输入质量",Toast.LENGTH_SHORT);
+            }
         }
     };
 
@@ -269,11 +273,15 @@ public class Dim2problem extends AppCompatActivity {
     private View.OnClickListener showPBTN_Clickstener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(Dim2problem.this, zeroone_showweight.class);
-            Bundle bundle =new Bundle();
-            bundle.putFloatArray("ItemWeights",ItemPs);
-            intent.putExtras(bundle);
-            startActivity(intent);
+            if (ItemPs!=null && ItemPs.length > 0) {
+                Intent intent = new Intent(Dim2problem.this, zeroone_showweight.class);
+                Bundle bundle = new Bundle();
+                bundle.putFloatArray("ItemWeights", ItemPs);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }else{
+                Toast.makeText(Dim2problem.this,"请先输入体积",Toast.LENGTH_SHORT);
+            }
         }
     };
 
@@ -295,11 +303,15 @@ public class Dim2problem extends AppCompatActivity {
 
     private View.OnClickListener showPriceBTN_ClickListener = new View.OnClickListener(){
         public void onClick(View v){
-            Intent intent = new Intent(Dim2problem.this, Zeroone_showprice.class);
-            Bundle bundle =new Bundle();
-            bundle.putFloatArray("ItemPrices",ItemPrices);
-            intent.putExtras(bundle);
-            startActivity(intent);
+            if (ItemPrices !=null && ItemPrices.length>0) {
+                Intent intent = new Intent(Dim2problem.this, Zeroone_showprice.class);
+                Bundle bundle = new Bundle();
+                bundle.putFloatArray("ItemPrices", ItemPrices);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }else{
+                Toast.makeText(Dim2problem.this,"请先输入效益",Toast.LENGTH_SHORT);
+            }
         }
     };
 }
@@ -333,14 +345,15 @@ class ResultForDim2Problem{
         for(int i = 0 ; i < Number ; i ++){
             sumWeight+=ItemWeight[i];
         }
-        if(sumWeight < MaxWeight){//如果物品总质量小于最大质量则无解
+        /*if(sumWeight < MaxWeight){//如果物品总质量小于最大质量则无解
             return 0;
         }
         else if(sumWeight == MaxWeight){//如果物品总质量刚好等于最大质量则只有一个解
             return 1;
         }else{
             return 2;//其他情况需要继续判断
-        }
+        }*/
+        return 2;
     }
 
     public float[] getItemWeight() {

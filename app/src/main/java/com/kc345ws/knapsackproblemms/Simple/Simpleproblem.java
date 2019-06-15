@@ -148,10 +148,13 @@ public class Simpleproblem extends AppCompatActivity {
                         String[] strings = new String[Results.size()];
                         for(int i = 0 ; i < Results.size() ; i++){
                             strings[i] = "";
+                            strings[i]+="第"+(i+1)+"组解:";
+                            strings[i]+="\n质量:";
                             Integer[] integers = Results.get(i);
                             for(int j = 0 ; j < integers.length ; j++){
                                 strings[i] += integers[j] +",";
                             }
+                            strings[i]+="\n";
                         }
 
                         AlertDialog alertDialog = new AlertDialog.Builder(Simpleproblem.this).setTitle("共有"+Results.size()+"组解")
